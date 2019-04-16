@@ -101,7 +101,7 @@ img {
     width: 52px;
     height: 52px;
     top: 150px;
-    left: -100px;
+    left: -240px;
 }
 
 #focus_Box .next {
@@ -113,7 +113,7 @@ img {
     width: 52px;
     height: 52px;
     top: 150px;
-    right: -50px;
+    right: -200px;
 }
 
 #focus_Box .prev:hover {
