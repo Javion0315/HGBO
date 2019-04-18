@@ -57,13 +57,13 @@ img {
     z-index: 0;
     position: absolute;
     width: 0px;
-    background: #787878;
+    /* background: #787878; */
     height: 0px;
     top: 146px;
     cursor: pointer;
     left: 377px;
     border-radius: 4px;
-    box-shadow: 1px 1px 12px rgba(200, 200, 200, 1);
+    /* box-shadow: 1px 1px 12px rgba(200, 200, 200, 1); */
 }
 
 #focus_Box li img {
