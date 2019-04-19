@@ -25,7 +25,7 @@ ZoomPic.prototype = {
 			{width:426, height:250, top:20, left:480, zIndex:2},
 			{width:476, height:210, top:40, left:476, zIndex:1},*/
       { width: 350, height: 220, top: 20, left: -150, zIndex: 1,},
-      { width: 445, height: 308, top: 180, left: 130, zIndex: 3 },
+      { width: 445, height: 308, top: 180, left: 75, zIndex: 3 },
       { width: 350, height: 220, top: 20, left: 400, zIndex: 2 }
     ];
     for (var i = 0; i < this.aLi.length; i++) this.aSort[i] = this.aLi[i];
@@ -154,7 +154,7 @@ ZoomPic.prototype = {
   },
   doMove: function(oElement, oAttr, fnCallBack) {
     var _this = this;
-    clearInterval(oElement.timer);
+    clearInterval(oElement.timer, this);
     oElement.timer = setInterval(function() {
       var bStop = true;
       for (var property in oAttr) {
