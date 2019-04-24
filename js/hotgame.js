@@ -183,7 +183,7 @@ var $box1 = $("#bg1");
 var $box2 = $("#bg2");
 var $box3 = $("#bg3");
 var index = 1;
-setInterval(fn,3300);
+setInterval(fn,3000);
 function fn() {
     index++; 
     if(index > 3) {
