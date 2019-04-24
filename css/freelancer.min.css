@@ -131,7 +131,11 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-    color: #fdf905
+    background-image: url('../img/ckBtn.png');
+    background-repeat: no-repeat;
+    background-position: 9px 8px;
+    background-size: 140px;
+    width: 150px;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active,

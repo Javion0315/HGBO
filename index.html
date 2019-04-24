@@ -3,19 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=1280, initial-scale=0.5,maximum-scale=3.0,user-scalable=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>HGBO</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template -->
@@ -219,10 +220,71 @@
             opacity: 0.7;
             border-radius: 50%;
         }
+
+        #news {
+            height: auto;
+        }
+
+        .newsTop {
+            top: -320px;
+        }
+
+        .newsRow {
+            margin-left: 60px
+        }
+
+        .newBottom {
+            top: 20px;
+        }
+
+        @media (min-width: 1200px) {
+            .gameTurn {
+                position: relative;
+                top: -134px;
+            }
+
+            .gameTurn .row {
+                margin-top: -26px;
+                margin-bottom: 55px;
+            }
+
+            .newsbg {
+                margin-top: -62px;
+            }
+
+            #news {
+                height: 805px;
+                margin-top: -160px;
+            }
+
+            .newsImg {
+                width: 70%;
+            }
+
+            .newsTop {
+                top: -275px;
+            }
+
+            .newsRow {
+                margin-left: 105px
+            }
+
+            .newBottom {
+                top: -20px;
+            }
+
+            #about {
+                height: 708px;
+            }
+            .gameLight {
+                margin-top: 263px;
+                margin-left: 212px;
+            }
+        }
     </style>
 </head>
 
-<body id="page-top" style="height: 100%;">
+<body class=".container-fluid" id="page-top" style="height: 100%;">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top text-uppercase" id="mainNav">
         <div class="container">
@@ -241,8 +303,7 @@
                     <li class="nav-item mx-0 mx-lg-1 mx-sm-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="./games.html">遊戲大廳</a>
                     </li>
-                    <li class="nav-item mx-0 mx-lg-1 mx-sm-1"
-                        style="background-image: url('./img/ckBtn.png'); background-repeat: no-repeat; background-position: 9px 8px; background-size: 140px; width: 150px">
+                    <li class="nav-item mx-0 mx-lg-1 mx-sm-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#hotGame">熱門遊戲</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1 mx-sm-1">
@@ -285,7 +346,8 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
         <div class="container" style="margin: 0px">
-            <div id="carousel" class="carousel slide" data-ride="carousel" style="background-size: 100%; width: 100vw; height: 100%;">
+            <div id="carousel" class="carousel slide" data-ride="carousel"
+                style="background-size: 100%; width: 100vw; height: 100%;">
                 <!-- Indicators -->
                 <ul class="carousel-indicators">
                     <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -312,18 +374,29 @@
     </header>
 
     <!-- 熱門遊戲 -->
-    <div style="position: absolute; width: 100%; height: 100%; z-index: -1;">
-        <img src="./img/homeGame/bg.png" height="100%" width="100%">
+    <div id="b1" style="position: absolute; width: 100%; height: 100%; z-index: -2;">
+        <img src="./img/homeGame/bg1.png" height="auto" width="100%">
     </div>
-    <!-- style="background-image: url('./img/homeGame/bg.png'); background-repeat: no-repeat; background-size: 100%; height: 1000px" -->
-    <section class="portfolio" id="hotGame" style="width: 100%; height: 900px">
-        <div class="container">
+    <div id="bg1" style="position: absolute; width: 100%; height: 100%; z-index: -2;">
+        <img height="auto" width="100%">
+    </div>
+    <div id="bg2" style="position: absolute; width: 100%; height: 100%; z-index: -2;">
+        <img height="auto" width="100%">
+    </div>
+    <div id="bg3" style="position: absolute; width: 100%; height: 100%; z-index: -2;">
+        <img height="auto" width="100%">
+    </div>
+    <div class="gameLight" style="position: absolute; z-index: -1;">
+        <img src="./img/homeGame/bglight.png" height="auto" width="100%">
+    </div>
+    <section class="portfolio" id="hotGame" style="width: 100%; height: auto">
+        <div class="container gameTurn">
             <div class="text-center text-uppercase text-white mb-0"
                 style="background-image: url('./img/homeGame/title.png'); background-repeat: no-repeat; background-position: 455px -1px; background-size: 320px; font-size: 36px; height: 90px; margin-top: 100px">
                 <b>熱門遊戲</b>
             </div>
             <!-- <hr class="star-dark mb-5"> -->
-            <div class="row" style="margin-left: 121px">
+            <div class="row" style="margin-left: 121px;">
                 <div id="focus_Box">
                     <span class="prev"><i class="fas fa-chevron-left" style="font-size: 50px"></i></span>
                     <ul>
@@ -350,14 +423,14 @@
     </section>
 
     <!-- 遊戲介紹 -->
-    <div style="position: absolute; width: 100%; height: 100%; z-index: -1;">
+    <div style="position: absolute; width: 100%; height: auto; z-index: -1;">
         <img src="./img/gameInfo/bg.png" height="100%" width="100%">
     </div>
     <!-- style="margin-bottom: 80px; background-image: url('./img/gameInfo/bg.png'); background-repeat: no-repeat; background-size: 100%; height: 1150px" -->
-    <section class="portfolio" id="gameIntro" style="width: 100%; height: 900px;">
+    <section class="portfolio" id="gameIntro" style="width: 100%; height: auto;">
         <div class="container">
             <div class="text-center text-uppercase text-white mb-0"
-                style="background-image: url('./img/homeGame/title.png'); background-repeat: no-repeat; background-position: 450px -2px; background-size: 320px; font-size: 36px; height: 150px;">
+                style="background-image: url('./img/homeGame/title.png'); background-repeat: no-repeat; background-position: 450px -2px; background-size: 320px; font-size: 36px; height: 130px;">
                 <b>遊戲介紹</b>
             </div>
             <!-- <hr class="star-dark mb-5"> -->
@@ -406,16 +479,16 @@
     </section>
 
     <!-- 最新消息 -->
-    <div style="position: absolute; width: 100%; height: 100%; z-index: -5">
+    <div class="newsbg" style="position: absolute; width: 100%; height: auto; z-index: -5">
         <img src="./img/news/bg.png" height="100%" width="100%">
     </div>
-    <section class="portfolio" id="news" style="width: 100%; height: 100%">
+    <section class="portfolio" id="news" style="width: 100%;">
         <div class="container">
             <div class="text-center text-uppercase text-white mb-0"
-                style="background-image: url('./img/homeGame/title.png'); background-repeat: no-repeat; background-position: 450px -2px; background-size: 320px; font-size: 36px; height: 90px; margin-top: 70px;">
+                style="background-image: url('./img/homeGame/title.png'); background-repeat: no-repeat; background-position: 450px -2px; background-size: 320px; font-size: 36px; height: 100px; margin-top: 70px;">
                 <b>最新消息</b>
             </div>
-            <div class="row" style="margin-left: 60px">
+            <div class="row newsRow">
                 <div class="col-md-6 col-lg-4">
                     <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
                         <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
@@ -423,7 +496,8 @@
                                 <i class="fas fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/news/D01.png" style="top: -320px; position: absolute; z-index: -2">
+                        <img class="img-fluid newsImg newsTop" src="img/news/D01.png"
+                            style="position: absolute; z-index: -2">
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -433,7 +507,8 @@
                                 <i class="fas fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/news/D01.png" style="top: -320px; position: absolute; z-index: -2">
+                        <img class="img-fluid newsImg newsTop" src="img/news/D01.png"
+                            style="position: absolute; z-index: -2">
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -443,7 +518,8 @@
                                 <i class="fas fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/news/D01.png" style="top: -320px; position: absolute; z-index: -2">
+                        <img class="img-fluid newsImg newsTop" src="img/news/D01.png"
+                            style="position: absolute; z-index: -2">
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -453,7 +529,8 @@
                                 <i class="fas fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/news/D01.png" style="top: -150px; position: absolute; z-index: -3">
+                        <img class="img-fluid newsImg" src="img/news/D01.png"
+                            style="top: -150px; position: absolute; z-index: -3">
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -463,7 +540,8 @@
                                 <i class="fas fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/news/D01.png" style="top: -150px; position: absolute; z-index: -3">
+                        <img class="img-fluid newsImg" src="img/news/D01.png"
+                            style="top: -150px; position: absolute; z-index: -3">
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -473,43 +551,47 @@
                                 <i class="fas fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img class="img-fluid" src="img/news/D01.png" style="top: -150px; position: absolute; z-index: -3">
+                        <img class="img-fluid newsImg" src="img/news/D01.png"
+                            style="top: -150px; position: absolute; z-index: -3">
                     </a>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fas fa-search-plus fa-3x"></i>
-                                </div>
+                <div class="col-md-6 col-lg-4 col-sm-4 col-xs-6">
+                    <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+                        <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <i class="fas fa-search-plus fa-3x"></i>
                             </div>
-                            <img class="img-fluid" src="img/news/D01.png" style="top: 20px; position: absolute; z-index: -4">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fas fa-search-plus fa-3x"></i>
-                                </div>
+                        </div>
+                        <img class="img-fluid newsImg newBottom" src="img/news/D01.png"
+                            style="position: absolute; z-index: -4">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-4 col-xs-6">
+                    <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+                        <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <i class="fas fa-search-plus fa-3x"></i>
                             </div>
-                            <img class="img-fluid" src="img/news/D01.png" style="top: 20px; position: absolute; z-index: -4">
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fas fa-search-plus fa-3x"></i>
-                                </div>
+                        </div>
+                        <img class="img-fluid newsImg newBottom" src="img/news/D01.png"
+                            style="position: absolute; z-index: -4">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-4 col-xs-6">
+                    <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+                        <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <i class="fas fa-search-plus fa-3x"></i>
                             </div>
-                            <img class="img-fluid" src="img/news/D01.png" style="top: 20px; position: absolute; z-index: -4">
-                        </a>
-                    </div>
+                        </div>
+                        <img class="img-fluid newsImg newBottom" src="img/news/D01.png"
+                            style="position: absolute; z-index: -4">
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <!-- <ul class="pagination justify-content-center">
+        <!-- <ul class="pagination justify-content-center">
                 <li class="page-item"><a class="page-link" href="javascript:void(0);"><i
                             class="fas fa-angle-left"></i></a></li>
                 <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
@@ -568,22 +650,23 @@
     </section>
 
     <!-- 關於我們 -->
-    <div style="position: absolute; width: 100%; height: 100%; z-index: -1">
-        <img src="./img/about/bg.png" height="100%" width="100%" height="auto">
+    <div style="position: absolute; width: 100%; height: auto; z-index: -1">
+        <img src="./img/about/bg.png" height="auto" width="100%" height="auto">
     </div>
-    <section id="about" style="height: 900px">
-        <div style="position: absolute; width: 100%; height: auto; z-index: -1; left: 0; margin-top: 86px">
-            <img src="./img/about/f01.png" width="83.5%" height="650px">
+    <section id="about">
+        <div class="wow animated fadeInLeft" data-wow-duration="2s"
+            style="position: absolute; width: 100%; height: auto; z-index: -1; left: 0; margin-top: 86px">
+            <img src="./img/about/f01.png" width="83%" height="auto">
         </div>
         <div class="container">
             <div class="text-center text-uppercase text-white mb-0"
                 style="background-image: url('./img/homeGame/title.png'); background-repeat: no-repeat; background-position: 450px -2px; background-size: 320px; font-size: 36px; height: 90px; margin-top: 70px">
                 <b>關於我們</b>
             </div>
-           
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-white"
-                    style="line-height: 30px; font-size: 18px; height: 450px; display: flex; flex-direction: column; justify-content: center">
+
+            <div class="row wow animated fadeIn delay-1s" data-wow-duration="2s" data-wow-delay="1s">
+                <div class="col-lg-6 mx-auto text-white"
+                    style="line-height: 30px; font-size: 18px; height: auto; display: flex; flex-direction: column; justify-content: center">
                     <div>
                         <span style="margin-left: 20px"></span>『伍捌棋牌是屬於2018年新創公司，首創最好玩的骰盅遊戲以及致力研發棋牌遊戲
                         ，我們擁有專業安全的技術團隊和創意多元的美術團隊，目的是讓玩家有更優良的遊戲環境。
@@ -598,9 +681,12 @@
         </div>
     </section>
 
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1" style="background-image: url('./img/news/bg.png'); background-repeat: no-repeat; background-size: 100%;">
-        <div class="portfolio-modal-dialog"  style="background-image: url('./img/news/D03.png'); background-position: 376px -46px; background-repeat: no-repeat; background-size: 60%;">
-            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#" style="font-size: 35px">&times;</a>
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1"
+        style="background-image: url('./img/news/bg.png'); background-repeat: no-repeat; background-size: 100%;">
+        <div class="portfolio-modal-dialog"
+            style="background-image: url('./img/news/D03.png'); background-position: 376px -46px; background-repeat: no-repeat; background-size: 60%;">
+            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#"
+                style="font-size: 35px">&times;</a>
             <div class="text-center text-uppercase text-white mb-0"
                 style="background-image: url('./img/homeGame/title.png'); background-repeat: no-repeat; background-position: 695px -3px; background-size: 320px; font-size: 36px; height: 90px;">
                 <b>最新消息</b>
@@ -608,9 +694,11 @@
             <div class="container text-center">
                 <div class="row">
                     <h4 style="color: #BE272C; position: relative; top: 65px; margin: auto">【系統】</h4>
-                    <div class="col-lg-8 mx-auto" style="position: absolute; top: 295px; display: flex; flex-direction: column">
+                    <div class="col-lg-8 mx-auto"
+                        style="position: absolute; top: 295px; display: flex; flex-direction: column">
                         <h2 class="text-uppercase mb-0" style="font-style:oblique;">免费表情包正式上线！</h2>
-                        <p class="mb-5" style="font-size: 30px; font-weight: bold; text-align: left; margin: 40px 150px; line-height: 50px">
+                        <p class="mb-5"
+                            style="font-size: 30px; font-weight: bold; text-align: left; margin: 40px 150px; line-height: 50px">
                             勝利時想擺出一個勝利的表情，還是失敗時想挑釁對手，
                             最新的游戲表情包推出啦～不管你是鬱悶也好，反敗為勝也好，想要表
                             達在屏幕前你澎湃的情緒嗎？<br><br>
@@ -631,14 +719,14 @@
             <div>版權所有 Copyright &copy; 2019 58poker All rights reserved</div>
         </div>
     </footer>
-   
+
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-to-top d-lg-none position-fixed ">
         <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-    
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -651,7 +739,7 @@
     <script src="js/hotgame.js"></script>
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
-
+    <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
     <script>
         function initComparisons() {
             var x, i;
@@ -729,8 +817,9 @@
                 }
             }
         }
+        initComparisons();
+        new WOW().init();
     </script>
-    <script>initComparisons();</script>
 </body>
 
 </html>

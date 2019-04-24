@@ -178,3 +178,22 @@ ZoomPic.prototype = {
 window.onload = function() {
   new ZoomPic("focus_Box");
 };
+
+var $box1 = $("#bg1");
+var $box2 = $("#bg2");
+var $box3 = $("#bg3");
+var index = 1;
+setInterval(fn,3300);
+function fn() {
+    index++; 
+    if(index > 3) {
+        index = 1;
+    }
+    $box1.animate(function() {
+      $box1.children().attr("src", "./img/homeGame/bg" + index + ".png");
+    });
+    $('#b1').hide();
+    // $box2.css("background-image","url(./img/homeGame/bg"+index+".png)");
+    $box2.children().attr("src", "./img/homeGame/bg" + index + ".png");
+    $box3.children().attr("src", "./img/homeGame/bg" + index + ".png");
+}
